@@ -7,9 +7,16 @@ export default {
   ],
   theme: {
     extend: {
+
+      backgroundImage:{
+        upload: "url('/TRI.svg')",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      backgroundColor: {
+        'custom-white': 'rgba(255, 255, 255, .25)',
       },
     },
   },
