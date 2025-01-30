@@ -30,7 +30,7 @@ const attendchart = () => {
     }
   return (
     <div className='h-full w-full flex flex-col px-5'>
-        <div className='h-16 w-4/5 ml-20 py-2 flex justify-center'>
+        <div className='h-16 w-4/5 ml-20 py-2 flex gap-4 justify-center items-center'>
              <TextField
                       label="Date"
                       name="date"
