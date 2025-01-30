@@ -57,7 +57,7 @@ useEffect(() => {
 
   return (
     <div className="h-full w-full flex justify-center items-center bg-gray-100 p-4">
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+      <form onSubmit={handleSubmit} className="bg-white p-6 gap-2 rounded-lg shadow-lg w-full max-w-md">
         <label>Attendance:</label>
         <FormControl fullWidth className={`${classes.formControl} mb-4`}>
           <InputLabel className='bg-white p-1' >User</InputLabel>
@@ -80,7 +80,6 @@ useEffect(() => {
           value={formData.date}
           onChange={handleChange}
           fullWidth
-          className="mb-4"
           InputLabelProps={{
             shrink: true,
           }}
