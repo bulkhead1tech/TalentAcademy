@@ -26,7 +26,7 @@ const login_card = () => {
     };
   return (<>
      <FormControlLabel
-        control={<Button className="text-yellow-400 rounded-full bg-black duration-200 ease-in-out" onClick={handleChange}><ArrowUpwardIcon/></Button>}
+        control={<Button className="text-yellow-400 rounded-full bg-black duration-200 ease-in-out" onClick={handleChange}><ArrowUpwardIcon className='text-yellow-400 bg-black' /></Button>}
       />
       <Grow direction="up" in={checked} mountOnEnter unmountOnExit>
     <div  className='  mr-10 rounded-lg flex justify-center items-center ease-in-out bg-custom-white backdrop-blur-md '> 
@@ -59,7 +59,7 @@ const login_card = () => {
                     type="password"
                     variant="outlined"
                 />
-                <Button variant="contained" color='black' className='bg-black text-yellow-400 w-full' type="submit">
+                <Button variant="contained" className='bg-black text-yellow-400 w-full' type="submit">
                     Submit
                 </Button>
             </Box>
