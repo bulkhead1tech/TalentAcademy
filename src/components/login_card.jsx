@@ -59,7 +59,7 @@ const login_card = () => {
                     type="password"
                     variant="outlined"
                 />
-                <Button variant="contained" className='bg-black text-yellow-400 w-full' type="submit">
+                <Button variant="contained" color='black' className='bg-black text-yellow-400 w-full' type="submit">
                     Submit
                 </Button>
             </Box>
