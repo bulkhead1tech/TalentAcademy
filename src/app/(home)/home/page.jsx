@@ -118,6 +118,7 @@ function App() {
                       type="submit"
                       className="bg-green-600 hover:bg-green-700"
                       variant="contained"
+                      color="success"
                       size="medium"
                       onClick={fetcher}
                       endIcon={<ImportExportIcon/>}

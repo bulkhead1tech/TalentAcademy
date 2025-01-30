@@ -97,7 +97,7 @@ const handleform = () => {
     <div className=" py-5 px-8 rounded-lg shadow-lg shadow-slate-300">
                  <form
                     onSubmit={valuepost}
-                    className="flex justify-center items-center py-5"
+                    className="flex justify-center gap-5 items-center py-5"
                   >
                     <label>Fetch data:</label>
                     <input
@@ -111,7 +111,6 @@ const handleform = () => {
                      color="success"
                       variant="contained"
                       size="medium"
-                      className=" ml-5"
                       onClick={valuepost}
                       endIcon={<ImportExportIcon/>}
 
