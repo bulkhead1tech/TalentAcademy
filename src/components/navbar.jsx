@@ -9,7 +9,7 @@ const navbar = () => {
   const pathname =usePathname();
   return (
 <>
-<nav className='h-14 bg-blue-600 shadow-slate-400 drop-shadow-lg text-white flex justify-between items-center'>
+<nav className='h-14 mx-5 bg-blue-600 shadow-slate-400 drop-shadow-lg text-white flex justify-between items-center'>
   <Link href={"/"}><Typography className='font-bold ml-12'>Talent Academy <sup>&copy;</sup></Typography></Link>
   <div className='flex justify-between gap-10 items-center mr-6'>
     <Link className={`${pathname === '/home' ? 'font-bold text-yellow-300' : ''}`}  href={"/home"}>Home</Link>
