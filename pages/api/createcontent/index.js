@@ -2,9 +2,11 @@ import Content  from "@/models/Topics.model"
 import { connectdb } from "@/utils/mongoose.utils"
 
 const handler =async (req, res)=>{
+    await connectdb();
+
     try {
-        await connectdb();
-        const {name, date} = await req.body.formData;
+        if(req.method==="POST"){
+            const {name, date} = await req.body.formData;
         const file = await req.body.fileUrl;
         const filer = await Content.findOne({file:file})
    
@@ -18,6 +20,15 @@ const handler =async (req, res)=>{
             res.json({
                 message: "saved successfully",
             });
+        }
+        }
+        else if(req.method==="GET"){
+            const filer = await Content.find()
+            res.json({
+                data: filer,
+
+            })
+
         }
         
     } catch (error) {

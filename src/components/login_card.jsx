@@ -5,6 +5,8 @@ import {Button} from '@mui/material'
 import { TextField, Box } from '@mui/material'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { AppContext } from './appcontext'
+import IconButton from '@mui/material/IconButton';
+
 const login_card = () => {
     const [checked, setChecked] = useState(false);
     const { setIsAdmin } = useContext(AppContext);
@@ -26,7 +28,8 @@ const login_card = () => {
     };
   return (<>
      <FormControlLabel
-        control={<Button className="bg-black" onClick={handleChange}><ArrowUpwardIcon className='text-yellow-400 bg-black' /></Button>}
+        control={ <IconButton className='bg-black' onClick={handleChange}><ArrowUpwardIcon className='text-yellow-400' /></IconButton>
+    }
       />
       <Grow direction="up" in={checked} mountOnEnter unmountOnExit>
     <div  className='  mr-10 rounded-lg flex justify-center items-center ease-in-out bg-custom-white backdrop-blur-md '> 

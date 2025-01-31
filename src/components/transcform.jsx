@@ -45,14 +45,14 @@ const TransactionForm = () => {
 
   return (
     <div className="h-full w-full flex justify-center items-center bg-gray-100 p-4">
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg flex flex-col gap-y-3 shadow-lg w-full max-w-md">
         <TextField
           label="Name"
           name="name"
           value={formData.name}
           onChange={handleChange}
           fullWidth
-          className="mb-4"
+          className=""
         />
         <TextField
           label="Date"
@@ -73,9 +73,9 @@ const TransactionForm = () => {
           value={formData.amount}
           onChange={handleChange}
           fullWidth
-          className="mb-4"
+          className=""
         />
-        <FormControl fullWidth className={`${classes.formControl} mb-4`}>
+        <FormControl fullWidth className={`${classes.formControl}`}>
           <InputLabel className='bg-white'>Transaction Type</InputLabel>
           <Select
             name="transactionType"

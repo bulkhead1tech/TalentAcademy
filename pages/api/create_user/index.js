@@ -3,7 +3,9 @@ import { connectdb } from "@/utils/mongoose.utils";
 const handler =async (req,res) => {
     try {
         await connectdb();
-      const {name, qualifications, age, phone,  email, address, college}= req.body.formData;
+
+        if(req.method==="POST"){
+          const {name, qualifications, age, phone,  email, address, college}= req.body.formData;
       const user = await User.findOne({name:name, email:email})
       if(!user){
         await User.create({
@@ -19,7 +21,19 @@ const handler =async (req,res) => {
         })
       }
       
+        }
+      
+    
+      else if(req.method==="GET"){
+        
+        const user = await User.find();
+        res.json({
+          data: user,
+          message: "data fetched"
+      })
 
+
+        }
         
     } catch (error) {
         console.log(error);

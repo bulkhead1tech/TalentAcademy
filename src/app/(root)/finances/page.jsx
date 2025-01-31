@@ -34,20 +34,20 @@ const page = () => {
     <Button className='' variant="contained" onClick={()=>setshow(!show)} startIcon={<AddIcon />}>
   New Transaction
 </Button>
-<InputLabel  id="demo-select-small-label" className='mr-3'>Filter</InputLabel>
+<InputLabel  id="demo-select-small-label" className=''>Filter:</InputLabel>
         <Select className=''
-                  labelId="demo-select-small-label"
-             id="demo-select-small"
+          labelId="demo-select-small-label"
+          id="demo-select-small"
           value={credit}
           onChange={handleChange}
         >
-                    <MenuItem value="none">None</MenuItem>
+          <MenuItem value="none">None</MenuItem>
 
           <MenuItem value={true}>Credit</MenuItem>
           <MenuItem value={false} >Debit</MenuItem>
         </Select>
     </div>
-       <Box className="overflow-y-scroll" sx={{ width: '90%', alignItems: 'start' }}>
+       <Box className="overflow-y-scroll py-2" sx={{ width: '90%', alignItems: 'start' }}>
       <Stack spacing={2}>
       {credit=="none"?<>
       {data.map((data)=>{
@@ -55,7 +55,7 @@ const page = () => {
       })}
       </>:<>
         {data.filter((data)=>{                  
-         return credit===true?data.transactionType:!data.transactionType;
+         return credit===true?data.transactionType:!data.transactionType ;
       }).map((data)=>{
          return <Transaction key={data._id} name={data.name} amount={data.amount} credit={data.transactionType} date={data.date}/>
       })

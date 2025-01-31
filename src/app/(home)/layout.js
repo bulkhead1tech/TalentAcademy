@@ -27,10 +27,10 @@ export default function RootLayout({ children }) {
         <AppProvider>
         <div className="h-screen bg-white w-screen overflow-hidden">
         <Navbar/>
+        <audio src="/alert_sound.mp3" className="hidden"></audio>
         <div className="h-[92vh] w-screen bg-white text-black flex ">
           <Drawer/>
   {children}
-
   </div>
         </div></AppProvider></body>
     </html>
