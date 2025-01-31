@@ -30,12 +30,12 @@ const page = () => {
    }, [])
   return (
     <div className='h-full w-full flex flex-col justify-start items-center bg-slate-100'> 
-    {!show?<><div className='h-16 bg-slate-100 w-full flex justify-end items-center'>
-    <Button className='mr-10' variant="contained" onClick={()=>setshow(!show)} startIcon={<AddIcon />}>
+    {!show?<><div className='h-16 p-10 gap-10 bg-slate-100 w-full flex justify-end items-center'>
+    <Button className='' variant="contained" onClick={()=>setshow(!show)} startIcon={<AddIcon />}>
   New Transaction
 </Button>
 <InputLabel  id="demo-select-small-label" className='mr-3'>Filter</InputLabel>
-        <Select className='mr-10'
+        <Select className=''
                   labelId="demo-select-small-label"
              id="demo-select-small"
           value={credit}
