@@ -1,4 +1,4 @@
-import { User } from "@/models/user.models"
+import User from "@/models/user.models"
 import { connectdb } from "@/utils/mongoose.utils";
 const handler =async (req,res) => {
     try {
@@ -22,7 +22,7 @@ const handler =async (req,res) => {
 
         
     } catch (error) {
-        console.log(data);
+        console.log(error);
     }
 }
 export default handler
