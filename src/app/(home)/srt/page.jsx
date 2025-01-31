@@ -60,7 +60,7 @@ const valuepost=async (e) => {
           return prevIndex + 1;
         });
         Soundplay();
-      }, 1000);
+      }, 25*1000);
 
       return () => {
         clearInterval(interval);

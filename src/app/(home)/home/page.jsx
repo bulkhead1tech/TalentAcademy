@@ -36,7 +36,7 @@ function App() {
         setTimeout(() => {
           setImage([])
           setindex(0)
-        }, 1500);
+        }, 3*60*1000);
         
       };
     }

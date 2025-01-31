@@ -60,7 +60,7 @@ const page = () => {
           return prevIndex + 1;
           
         });
-        Soundplay();  }, 1000);
+        Soundplay();  }, 10*1000);
 
       return () => {
         clearInterval(interval);
