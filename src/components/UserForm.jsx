@@ -45,7 +45,7 @@ const UserForm = () => {
         body: JSON.stringify({formData})
       })
       const data = await response.json();
-  
+       console.log(data.message);
       alert(data.message)
       
     } catch (error) {
