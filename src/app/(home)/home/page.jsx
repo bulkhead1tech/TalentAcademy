@@ -29,14 +29,14 @@ function App() {
           return prevIndex + 1;
         });
         Soundplay();
-      }, 5000);
+      }, 3*60*1000);
 
       return () => {
         clearInterval(interval);
         setTimeout(() => {
           setImage([])
           setindex(0)
-        }, 3*60*1000);
+        }, 1000);
         
       };
     }
