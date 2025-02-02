@@ -29,8 +29,8 @@ const attendchart = () => {
         
     }
   return (
-    <div className='h-full w-full flex flex-col px-5'>
-        <div className='h-16 w-full ml-20 py-2 flex gap-4 justify-center items-center'>
+    <div className='h-full w-full flex flex-col justify-center items-center px-5'>
+        <div className='h-16 w-full lg:w-4/5 py-2 flex gap-4 justify-center items-center'>
              <TextField
                       label="Date"
                       name="date"
@@ -48,7 +48,7 @@ const attendchart = () => {
                    
         </div>
         <div className='w-full h-full flex justify-center'>
-        <div className='w-full h-full mt-5 p-3 rounded-3xl shadow-lg shadow-slate-300  bg-white overflow-y-scroll no-scrollbar '>
+        <div className='w-full h-full lg:h-full lg:w-4/5 md:w-4/5 mt-5 p-3 rounded-3xl shadow-lg shadow-slate-300  bg-white overflow-y-scroll no-scrollbar '>
         {user.map(user => (
               <li className='px-5 my-1' key={user._id}>
                 {user.user}
