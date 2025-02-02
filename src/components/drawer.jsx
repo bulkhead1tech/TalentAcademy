@@ -20,8 +20,8 @@ const Drawer = () => {
   const isActive = (path) => pathname === path;
 
   return (
-    <div className={`h-full ${isOpen ? 'w-full fixed lg:static md:static sm:w-full lg:w-1/4 md:w-1/4' : 'w-1/4 lg:w-16 md:w-16'} bg-white shadow-lg z-10 transition-width duration-300 overflow-hidden`}>
-      <div className='flex justify-end p-2'>
+    <div className={` ${isOpen ? 'w-full fixed lg:static md:static h-full lg:h-full md:h-full sm:w-full lg:w-1/4 md:w-1/4' : 'h-full lg:h-full md:h-full w-1/6 lg:w-16 md:w-16'} bg-white shadow-lg z-10 transition-width duration-300 overflow-hidden`}>
+      <div className={`flex justify-end p-2 ${isOpen ? "":"px-auto"} `}>
         {isOpen ? (
           <ArrowBackIosNewIcon className='cursor-pointer' onClick={toggleDrawer} />
         ) : (
@@ -46,7 +46,7 @@ const Drawer = () => {
           <Typography>Attendance</Typography></Link>
         </div>
       ) : (
-        <div className='flex flex-col items-center p-1 mt-36 text-lg font-medium'>
+        <div className='md:flex  lg:flex lg:flex-col md:flex-col hidden  items-center p-1 mt-36 text-lg font-medium'>
           <Link className={`w-full p-3 ${isActive('/home') ? 'bg-gray-300' : ''} hover:bg-gray-200 rounded-lg text-center`} href={"/home"}>              <InsertPhotoOutlinedIcon  className='mr-2' fontSize='large' />
           </Link>
           <Link className={`w-full p-3 ${isActive('/wat') ? 'bg-gray-300' : ''} hover:bg-gray-200 rounded-lg text-center`} href={"/wat"}><AssignmentOutlinedIcon  className='mr-2' fontSize='large' /></Link>
