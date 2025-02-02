@@ -75,12 +75,12 @@ function App() {
   
   return (
     <>
-      <div className="h-full w-full  flex justify-center items-center bg-white">
+      <div className="h-full w-full flex flex-col lg:flex-row md:flex-row p-5 justify-center items-center bg-white">
       
         {show ? <>
               <div>
                 {image.length!=0?<>
-                  <img height={100} width={100} className="absolute h-screen w-screen z-20 top-0 left-0" src={URL.createObjectURL(image[index])} />
+                  <img height={100} width={100} className="absolute h-screen sm:h-full w-screen z-20 top-0 left-0" src={URL.createObjectURL(image[index])} />
 
                 </>:<>
                 
@@ -88,7 +88,7 @@ function App() {
                 <Button className=" mt-20" onClick={()=>(setshow(false))} variant="outlined">{"<<<"}Back</Button>              </>}
             </div></>
            : <>
-            <div className="h-full w-full flex justify-center items-center bg-white">
+            <div className="h-full w-full flex flex-col lg:flex-row md:flex-row gap-y-3 justify-center items-center bg-white">
              <form onSubmit={handlesubmit} className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
               <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="fileInput">

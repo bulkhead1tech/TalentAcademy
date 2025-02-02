@@ -36,11 +36,11 @@ const page = () => {
 
   return (
     <div className='h-full w-full flex flex-col justify-start overflow-y-scroll items-center bg-slate-100'> 
-     {!play?<>    <div className='h-16 bg-slate-100 mt-2 gap-5 px-10 w-full flex justify-end items-center'>
+     {!play?<>    <div className='h-16 bg-slate-100 mt-2 gap-x-5 px-10 w-full flex justify-end items-center'>
     <Button onClick={()=> setplay(!play)}  variant='contained' color='primary'>Upload</Button>
     <TextField id="outlined-basic" value={search} onInput={handleinput} color='primary' size='small' label="Search." variant="outlined" className=' mr-10' />
     </div>
-       <div className="h-fit w-full p-10 gap-5 grid grid-cols-4 grid-rows-2 overflow-y-scroll no-scrollbar" >
+       <div className="h-fit w-full p-10 gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 overflow-y-scroll no-scrollbar" >
       {user.length == 0?<>
         <h1>No user found...</h1>
 

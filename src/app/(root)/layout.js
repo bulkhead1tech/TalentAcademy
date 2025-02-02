@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       >      
       <AppProvider>
         <div className="h-screen bg-white w-screen overflow-x-hidden">
-        <Navbar/>
+        <div className="h-[8vh] w-screen"><Navbar/></div>
         <div className="h-[92vh] w-screen text-black flex ">
   {children}
 </div>

@@ -71,7 +71,7 @@ const page = () => {
   
 
   return (
-    <div className="h-full w-full flex flex-col bg-white  justify-center items-center">
+    <div className="h-full w-full flex p-5 flex-col bg-white  justify-center items-center">
       {!play ? (
         <>
           {" "}
@@ -96,12 +96,12 @@ const page = () => {
 
             </>:<></>}
           </div>
-          <div className="h-full w-full flex justify-center items-center">
+          <div className="h-full w-full flex flex-col md:flex-row lg:flex-row justify-center items-center">
             {Upload ? (
               <Form />
             ) : (
               <>
-                <div className="h-full w-1/2 items-center justify-center flex flex-col">
+                <div className="lg:h-full lg:w-1/2 md:h-full md:w-1/2 h-1/2 w-full   items-center justify-center flex flex-col">
                  <div className=" py-5 px-8 rounded-lg shadow-lg shadow-slate-300">
                  <form
                     onSubmit={valuepost}

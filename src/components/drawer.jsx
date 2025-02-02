@@ -20,7 +20,7 @@ const Drawer = () => {
   const isActive = (path) => pathname === path;
 
   return (
-    <div className={`h-full ${isOpen ? 'w-1/4' : 'w-16'} bg-white shadow-lg z-10 transition-width duration-300 overflow-hidden`}>
+    <div className={`h-full ${isOpen ? 'w-full fixed lg:static md:static sm:w-full lg:w-1/4 md:w-1/4' : 'w-1/4 lg:w-16 md:w-16'} bg-white shadow-lg z-10 transition-width duration-300 overflow-hidden`}>
       <div className='flex justify-end p-2'>
         {isOpen ? (
           <ArrowBackIosNewIcon className='cursor-pointer' onClick={toggleDrawer} />

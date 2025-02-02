@@ -73,7 +73,7 @@ const handleform = () => {
 
   return (
  
-    <div className='h-full w-full flex flex-col justify-center items-center'>
+    <div className='h-full w-full p-5 flex flex-col justify-center items-center'>
     
    {!play?<>
   <div className='h-16 flex justify-end items-center '>
@@ -90,10 +90,10 @@ const handleform = () => {
 
             </>:<></>}
 </div>
-<div className='h-full w-full flex justify-center items-center'>
+<div className='h-full w-full flex flex-col md:flex-row lg:flex-row justify-center items-center'>
 
 
-  {Upload ? <Form/>:<>  <div className="h-full w-1/2 items-center justify-center flex flex-col">
+  {Upload ? <Form/>:<>  <div className="lg:h-full lg:w-1/2 md:h-full md:w-1/2 h-1/2 w-full    items-center justify-center flex flex-col">
     <div className=" py-5 px-8 rounded-lg shadow-lg shadow-slate-300">
                  <form
                     onSubmit={valuepost}

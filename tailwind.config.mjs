@@ -10,6 +10,7 @@ export default {
 
       backgroundImage:{
         upload: "url('/TRI.svg')",
+        logo: "url('/logod.png')",
       },
       colors: {
         background: "var(--background)",

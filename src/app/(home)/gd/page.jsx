@@ -61,7 +61,7 @@ const handlesubmit = (e) => {
 
   return (
     <>
-    <div className="h-full w-full bg-white   flex justify-center items-center bg-white-600">
+    <div className="h-full w-full bg-white p-5   flex justify-center items-center bg-white-600">
   
       {show ? (
             <div className='flex flex-col bg-white justify-center items-center'>
