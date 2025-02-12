@@ -48,7 +48,7 @@ const ContentForm = () => {
 
   return (
     <div className="h-full w-full flex justify-center items-center bg-gray-100 p-4">
-      <form onSubmit={handleSubmit} encType='multipart/form-data' className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+      <form onSubmit={handleSubmit} encType='multipart/form-data' className="bg-white flex flex-col gap-y-3 p-6 rounded-lg shadow-lg w-full max-w-md">
         <TextField
           label="Name"
           name="name"
@@ -56,7 +56,6 @@ const ContentForm = () => {
           onChange={handleChange}
           fullWidth
           required
-          className="mb-4"
         />
         <TextField
           label="Date"
@@ -65,7 +64,6 @@ const ContentForm = () => {
           value={formData.date}
           onChange={handleChange}
           fullWidth
-          className="mb-2"
           InputLabelProps={{
             shrink: true,
           }}
@@ -73,8 +71,7 @@ const ContentForm = () => {
         <Cld onFileUrlChange={handleFileUrlChange}/>
         {fileUrl ===""?<>
         <label  className='text-red-700 ml-2'>No file!</label></>:<><label className='text-green-700 ml-2'>File ready.</label></>}
-       <br />
-      <label className='text-sm -mb-2 text-slate-500'>Do not fill anything below!</label>  <TextField
+      <label className='text-sm  text-slate-500'>Do not fill anything below!</label>  <TextField
                 label="File URL"
                 variant="outlined"
                 fullWidth
