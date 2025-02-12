@@ -15,11 +15,25 @@ function App() {
   const[index, setindex]=useState(0)
   const [count, setcount] = useState(0)
    
-
+  useEffect(() => {
+    if(show){
+    const timeout =  setTimeout(() => {
+        document.getElementById("blank").style.filter="brightness(0)"
+      }, 30*1000);
+      return () => {
+        clearTimeout(timeout)
+      }
+    }
+  
+    
+  }, [index, show])
+  
   
   useEffect(() => {
     if (show) {
       const interval = setInterval(() => {
+        document.getElementById("blank").style.filter="brightness(1)"
+
         setindex((prevIndex) => {
           if (prevIndex >= image.length - 1) {
             clearInterval(interval);
@@ -29,7 +43,7 @@ function App() {
           return prevIndex + 1;
         });
         Soundplay();
-      }, 3*60*1000);
+      }, 3.5*60*1000);
 
       return () => {
         clearInterval(interval);
@@ -80,7 +94,7 @@ function App() {
         {show ? <>
               <div>
                 {image.length!=0?<>
-                  <img height={100} width={100} className="absolute h-screen sm:h-full w-screen z-20 top-0 left-0" src={URL.createObjectURL(image[index])} />
+                  <img id="blank" height={100} width={100} className="absolute h-screen sm:h-full w-screen z-20 top-0 left-0" src={URL.createObjectURL(image[index])} />
 
                 </>:<>
                 
