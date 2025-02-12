@@ -10,6 +10,8 @@ import Soundplay from "@/components/soundplayer";
 import {saveAs} from "file-saver"
 import DownloadIcon from '@mui/icons-material/Download';
 import ImportExportIcon from '@mui/icons-material/ImportExport';
+import dynamic from "next/dynamic";
+import Labelbutton from "@/components/labelbutton";
 const page = () => {
   const [Upload, setUpload] = useState(false);
   const [data, setdata] = useState([]);
@@ -44,6 +46,19 @@ const page = () => {
       console.error("Error posting data:", error);
     }
   };
+  const parser =(e)=>{
+    const file= e.target.files[0]
+    const reader = new FileReader();
+    reader.onload=(event)=>{
+      const content = event.target.result;
+      const ndata =  content.split("\n")
+      setdata((ndata))
+
+    }
+    reader.readAsText(file)
+
+  }
+ 
 
   const countch = (e) => {
     setcount(e.target.value);
@@ -76,6 +91,7 @@ const page = () => {
         <>
           {" "}
           <div className="h-16 flex justify-end items-center ">
+            
             <Button
               size="small"
               color="success"
@@ -103,6 +119,21 @@ const page = () => {
               <>
                 <div className="lg:h-full lg:w-1/2 md:h-full md:w-1/2 h-1/2 w-full   items-center justify-center flex flex-col">
                  <div className=" py-5 px-8 rounded-lg shadow-lg shadow-slate-300">
+                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="fileInput">
+                  Upload File
+                </label>
+                <input
+                  id="fileInput"
+                  type="file"
+                  onInput={parser}
+                  className="hidden"
+                />
+                <label
+                  htmlFor="fileInput"
+                  className="cursor-pointer bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                >
+                  Choose File
+                </label>
                  <form
                     onSubmit={valuepost}
                     className="flex justify-center gap-5 items-center py-5"
@@ -159,7 +190,7 @@ const page = () => {
 
           <div className="h-full w-full flex justify-center items-center">
           {data.length!=0 ? <h1 className="text-black font-bold text-9xl mb-40">
-            {data[index].wat}
+            {data[index].wat || data[index]}
             </h1> :<h1 className="text-black font-bold text-9xl mb-40">
             {"null"}
             </h1> }
@@ -171,5 +202,6 @@ const page = () => {
   );
 };
 
-export default page;
+export default dynamic (() => Promise.resolve(page), {ssr: false})
+
 
