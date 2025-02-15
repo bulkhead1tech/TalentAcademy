@@ -3,7 +3,7 @@ import { Card, CardActionArea, CardContent, Typography } from '@mui/material';
 
 const ProfCard = ({ name, qualifications, age, phone, email, address, college }) => {
   return (
-    <Card className='rounded-lg' sx={{ maxWidth: 300 }}>
+    <Card className='rounded-lg h-full overflow-y-scroll no-scrollbar' sx={{ maxWidth: 300, minHeight: 250}}>
       <CardActionArea className='p-2'>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
