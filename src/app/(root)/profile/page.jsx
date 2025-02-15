@@ -40,7 +40,7 @@ const page = () => {
     <Button onClick={()=> setplay(!play)}  variant='contained' color='primary'>Upload</Button>
     <TextField id="outlined-basic" value={search} onInput={handleinput} color='primary' size='small' label="Search." variant="outlined" className=' mr-10' />
     </div>
-       <div className="h-fit w-full p-10 gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 overflow-scroll no-scrollbar" >
+       <div className="h-fit w-full p-10 gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" >
       {user.length == 0?<>
         <h1>No user found...</h1>
 
