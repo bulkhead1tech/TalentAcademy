@@ -9,12 +9,20 @@ import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import Soundplay from "@/components/soundplayer";
 import ImportExportIcon from '@mui/icons-material/ImportExport';
 import dynamic from "next/dynamic";
+import { saveAs } from "file-saver";
 function App() {
   const [image, setImage] = useState([]);
   const [show, setshow] = useState(false);
   const[index, setindex]=useState(0)
   const [count, setcount] = useState(0)
-   
+  
+  const download = () => {
+    image.map((data)=>{
+      const file = new Blob([data], { type: 'image/png' });
+      saveAs(file, 'iamge.png');
+  })
+      
+     };
   useEffect(() => {
     if(show){
     const timeout =  setTimeout(() => {
@@ -140,9 +148,14 @@ function App() {
                     >
                       Fetch
                     </Button>
-                <Button variant="contained" endIcon={<PlayCircleIcon />} onClick={mode}>
+                    {image.length!=0?<>           <Button variant="outlined" onClick={download}>
+  download
+</Button> <Button variant="contained" endIcon={<PlayCircleIcon />} onClick={mode}>
   Play
-</Button>
+</Button></>:<></>}
+         
+               
+
               </div></form>
             <Box className="ml-5" sx={{ minWidth: 275 } }>
       <Card variant="outlined"><Subcard/></Card>
