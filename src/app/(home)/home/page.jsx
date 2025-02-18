@@ -94,7 +94,7 @@ function App() {
         {show ? <>
               <div>
                 {image.length!=0?<>
-                  <img id="blank" height={100} width={100} className="absolute h-screen sm:h-full w-screen z-20 top-0 left-0" src={URL.createObjectURL(image[index])} />
+                  <img id="blank" height={100} width={100} className="absolute lg:h-screen lg:w-screen md:h-screen md:w-screen top-1/4 left-0  w-screen z-20 lg:top-0 md:top-0 md:left-0 lg:left-0" src={URL.createObjectURL(image[index])} />
 
                 </>:<>
                 
