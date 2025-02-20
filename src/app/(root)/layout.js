@@ -14,13 +14,12 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Talent Academy",
-  name:"google-site-verification",
-  content:"HmRL97VVk4_Hcx8Qr4WnPpECY_In6ouYlKkzpDJozL0",
   description: "Services selection board interview preparation",
 };
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+    <meta name="google-site-verification" content="HmRL97VVk4_Hcx8Qr4WnPpECY_In6ouYlKkzpDJozL0" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased  `}
       >      
