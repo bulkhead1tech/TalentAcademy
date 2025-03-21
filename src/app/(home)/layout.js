@@ -17,6 +17,14 @@ export const metadata = {
   title: "Talent Academy",
   description: "Services selection board interview preparation",
 };
+export const metadata = {
+  title: "Talent Academy - Expert Interview Preparation (Free) | Services Selection Board (SSB) Coaching",
+  description: "Unlock your potential with our free comprehensive services selection board (SSB) interview preparation, coaching, and training programs for defense, government, and corporate jobs.",
+  keywords: "SSB Interview, Services Selection Board, SSB, free SSB, ssb, Interview Preparation, Coaching, Defense Jobs, Government Jobs, Corporate Jobs",
+};
+
+
+
 
 export default function RootLayout({ children }) {
   return (
