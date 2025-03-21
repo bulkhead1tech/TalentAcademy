@@ -12,11 +12,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-export const metadata = {
-  title: "Talent Academy",
-  description: "Services selection board interview preparation",
-};
 export const metadata = {
   title: "Talent Academy - Expert Interview Preparation (Free) | Services Selection Board (SSB) Coaching",
   description: "Unlock your potential with our free comprehensive services selection board (SSB) interview preparation, coaching, and training programs for defense, government, and corporate jobs.",
