@@ -1,9 +1,6 @@
 import Admin from "@/models/admin.model"
-import { connectdb } from "@/utils/mongoose.utils"
 
 const handler = async (req, res) => {
-    await connectdb();
-
     try {
         const {name, password} = req.body;
         const admin = await Admin.find({name: name, password:password});
