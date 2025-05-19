@@ -1,8 +1,6 @@
 import User from "@/models/user.models"
-import { connectdb } from "@/utils/mongoose.utils"
 
 const handler = async (req, res) => {
-    await connectdb();
 
     if(req.method==="GET"){
         try {
