@@ -1,4 +1,3 @@
-import { connectdb } from "@/utils/mongoose.utils";
 import WAT from "@/models/wat.model";
 
 
@@ -17,7 +16,6 @@ import WAT from "@/models/wat.model";
 
   const handler =async(req, res)=>{
     try {
-      await connectdb()
       const number = req.body.details;
       const num = parseInt(number)
       console.log(number);
