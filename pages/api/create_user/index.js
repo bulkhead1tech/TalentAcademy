@@ -1,9 +1,8 @@
 import User from "@/models/user.models"
-import { connectdb } from "@/utils/mongoose.utils";
 const handler =async (req,res) => {
     try {
-        await connectdb();
 
+        
         if(req.method==="POST"){
           const {name, qualifications, age, phone,  email, address, college}= req.body.formData;
       const user = await User.findOne({name:name, email:email})
