@@ -1,8 +1,6 @@
 import Content  from "@/models/Topics.model"
-import { connectdb } from "@/utils/mongoose.utils"
 
 const handler =async (req, res)=>{
-    await connectdb();
 
     try {
         if(req.method==="POST"){
