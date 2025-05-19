@@ -1,5 +1,4 @@
 import SRT from "@/models/items.model"
-import { connectdb } from "@/utils/mongoose.utils";
 
 const handler=async(req, res)=>{
   
