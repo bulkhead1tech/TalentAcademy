@@ -4,7 +4,6 @@ import { connectdb } from "@/utils/mongoose.utils";
 const handler=async(req, res)=>{
   
 try {
-    await connectdb();
     const number = req.body.details;
     const num = parseInt(number)
     const data = await SRT.aggregate([{ $sample: { size: num } }]).exec();         
