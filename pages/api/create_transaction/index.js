@@ -1,5 +1,4 @@
 import Transaction from "@/models/Transaction.model"
-import { connectdb } from "@/utils/mongoose.utils";
 const handler = async(req, res)=>{
   try {
     const {name, date, amount, transactionType} = req.body.formData;
