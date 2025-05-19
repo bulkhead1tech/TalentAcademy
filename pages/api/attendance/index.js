@@ -1,5 +1,4 @@
 import Attendance from "@/models/Attendance.model";
-import { connectdb } from "@/utils/mongoose.utils"
 
 const handler =async (req, res)=>{
     try {
