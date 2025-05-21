@@ -1,8 +1,10 @@
 import Content  from "@/models/Topics.model"
+import { connectdb } from "@/utils/mongoose.utils";
 
 const handler =async (req, res)=>{
 
     try {
+        await connectdb();
         if(req.method==="POST"){
             const {name, date} = await req.body.formData;
         const file = await req.body.fileUrl;

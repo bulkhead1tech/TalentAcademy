@@ -1,6 +1,7 @@
 import Transaction from "@/models/Transaction.model"
 const handler = async(req, res)=>{
   try {
+    await  connectdb();
     const {name, date, amount, transactionType} = req.body.formData;
     await Transaction.create({name, date, amount, transactionType});
     res.json({

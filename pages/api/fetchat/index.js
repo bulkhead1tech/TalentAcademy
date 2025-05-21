@@ -1,7 +1,9 @@
 import Attendance from "@/models/Attendance.model";
+import { connectdb } from "@/utils/mongoose.utils";
 
 const handler =async (req, res)=>{
     try {
+        await connectdb();
         const {date} = await req.body;
          const str = date.toString();
         console.log(str)

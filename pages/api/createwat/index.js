@@ -1,7 +1,9 @@
 import WAT from "@/models/wat.model";
+import { connectdb } from "@/utils/mongoose.utils";
 
 const handler = async (req, res) => {
   try {
+    await connectdb();
     const input = await req.body.formData;
 
      const wat = await WAT.findOne({ wat: input });
